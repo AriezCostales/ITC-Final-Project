@@ -1,0 +1,524 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+  background-color: #FFFBF4; 
+  color: #11120D;
+}
+
+header {
+  background: #565449;
+  color: #FFFBF4;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 20px; 
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+nav {
+  flex: 1 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #FFFBF4;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+nav ul li a.active {
+  color: #D8CFBC;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  flex: 1; 
+  padding: 20px;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.destinations article {
+  border: 1px solid #D8CFBC;
+  padding: 15px;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #D8CFBC;
+  background: #D8CFBC;
+}
+
+.tours {
+  padding: 50px;
+  background: #565449;
+  color: #FFFBF4;
+  text-align: center;
+}
+
+.tours h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #D8CFBC;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card::before {
+  content: '';
+  display: block;
+  padding-top: 177.78%;
+}
+
+.card-content {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  color: #D8CFBC;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+}
+
+footer {
+  background: #565449;
+  color: #FFFBF4;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer {
+  background: #565449;
+  color: #FFFBF4;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.footer p {
+  color: #11120D;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+.read-more-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.read-more-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #FFFBF4; 
+  background-color: #565449;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.read-more-button:hover {
+  background-color: #11120D;
+  transform: scale(1.05);
+}
+
+.read-more-button:active {
+  background-color: #D8CFBC;
+  transform: scale(0.95);
+}
+
+.experience {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid #D8CFBC;
+  border-radius: 15px;
+  background-color: #FFFBF4;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.experience-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #565449;
+}
+
+.experience-text h2 {
+  margin-top: 0;
+  color: #11120D;
+}
+
+.experience-text p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.experience-photo {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.about-me {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #FFFBF4;
+}
+
+.about-me h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #11120D;
+}
+
+.about-me-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-me-photo {
+  flex: 1 1 350px;
+}
+
+.about-me-photo img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-me-details {
+  max-width: 500px;
+  text-align: left;
+}
+
+.about-me-details h2 {
+  font-size: 2rem;
+  color: #11120D;
+  margin-bottom: 15px;
+}
+
+.about-me-details p {
+  font-size: 1rem;
+  color: #565449;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.about-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 1.8rem;
+  color: #565449;
+  margin-bottom: 5px;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #11120D;
+}
+
+.about-quote {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #565449;
+  line-height: 1.5;
+}
+
+.about-quote span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #11120D;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-form .form-group {
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group.wide {
+  flex: 1 1 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #565449;
+  border-radius: 15px;
+  background-color: #FFFBF4;
+  color: #11120D;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #565449;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+.contact-form .submit-button {
+  background-color: #565449; 
+  color: #FFFBF4;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+.contact-form .submit-button:hover {
+  background-color: #11120D;
+}
+
+.contact-container {
+  background-color: #D8CFBC;
+  color: #11120D;
+}
+
+.contact-info h1 {
+  color: #11120D;
+}
+
+.contact-info p {
+  color: #565449;
+}
+
+input, textarea {
+  background-color: #FFFBF4;
+  border: 1px solid #565449;
+  color: #11120D;
+}
+
+.submit-button {
+  background-color: #565449;
+  color: #FFFBF4;
+}
+
+.submit-button:hover {
+  background-color: #11120D;
+  color: #FFFBF4;
+}
+
+.footer {
+  background: #565449;
+  color: #FFFBF4;
+}
+
+.social-icons a img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.main-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 2px solid #ddd;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me-details {
+    text-align: center;
+  }
+
+  .about-me-photo img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .experience {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .experience-photo {
+    max-width: 100%;
+  }
+
+  .experience-text {
+    padding-left: 0;
+  }
+}
